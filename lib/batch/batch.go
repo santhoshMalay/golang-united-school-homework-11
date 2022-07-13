@@ -19,7 +19,7 @@ func getOne(id int64) user {
 
 func getBatch(n int64, pool int64) (res []user) {
 
-	var userID int64 = 0
+	var userID int64 = -1
 	var wg sync.WaitGroup
 	var mu sync.Mutex
 	usersPerGoRoutine := int(n / pool)
