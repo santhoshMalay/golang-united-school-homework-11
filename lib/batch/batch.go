@@ -1,5 +1,6 @@
-// package batch
-package main
+package batch
+
+// package main
 
 import (
 	"fmt"
