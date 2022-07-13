@@ -3,7 +3,6 @@ package batch
 // package main
 
 import (
-	"fmt"
 	"sync"
 	"sync/atomic"
 	"time"
@@ -24,7 +23,7 @@ func getBatch(n int64, pool int64) (res []user) {
 	var wg sync.WaitGroup
 	var mu sync.Mutex
 	usersPerGoRoutine := int(n / pool)
-	fmt.Printf("no.Of go routines %d \n", usersPerGoRoutine)
+	//fmt.Printf("no.Of go routines %d \n", usersPerGoRoutine)
 	//additionalUsers := int(n % pool)
 
 	// wg.Add(int(pool))
@@ -46,8 +45,8 @@ func getBatch(n int64, pool int64) (res []user) {
 	return res
 }
 
-func main() {
-	x := getBatch(53, 5)
-	fmt.Println(x)
-	fmt.Printf("Lenght of x is %d", len(x))
-}
+// func main() {
+// 	x := getBatch(53, 5)
+// 	fmt.Println(x)
+// 	fmt.Printf("Lenght of x is %d", len(x))
+// }
